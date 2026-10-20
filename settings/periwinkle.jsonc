@@ -1,0 +1,102 @@
+// Periwinkle — the full look & layout, minus fonts.
+//
+// Paste these keys at the top level of your own settings.json
+// (Zed: `zed: open settings file`). Every key is independent, so take the
+// whole thing or cherry-pick a section.
+{
+  // ─────────────────────────────── Theme ──────────────────────────────────────
+  // "Periwinkle Glow" is the daily driver; plain "Periwinkle" is the punchier
+  // magenta/cyan variant. Both use blurred, translucent panels — on macOS the
+  // desktop shows through as frosted glass.
+  "theme": {
+    "mode": "dark",
+    "light": "Periwinkle Glow",
+    "dark": "Periwinkle Glow"
+  },
+  // Needs the `fantasticons-icons-theme` extension (see extensions.jsonc).
+  "icon_theme": {
+    "mode": "dark",
+    "light": "FantastIcons Icon Theme",
+    "dark": "FantastIcons Icon Theme"
+  },
+  "cursor_animation": { "enabled": true },
+
+  // ─────────────────────────────── Fonts ──────────────────────────────────────
+  // Not included — bring your own. For reference, the original setup uses
+  // Operator Mono (buffer + UI) and Input Mono (terminal) at these sizes:
+  //
+  // "buffer_font_family": "Operator Mono",
+  // "buffer_font_size": 17.0,
+  // "buffer_font_weight": 600.0,
+  // "buffer_font_features": { "calt": false },
+  // "ui_font_family": "Operator Mono Lig",
+  // "ui_font_size": 13.0,
+  // "ui_font_weight": 850.0,
+  // "agent_ui_font_size": 16.0,
+  "buffer_line_height": "comfortable",
+  "markdown_preview": { "font_size": 16.0 },
+
+  // ─────────────────────────────── Editor ─────────────────────────────────────
+  "soft_wrap": "bounded",
+  "preferred_line_length": 120,
+  // Indent guides colored by depth (the indent-rainbow look).
+  "indent_guides": { "enabled": true, "coloring": "indent_aware" },
+  // First diagnostic rendered inline at the end of the line.
+  "diagnostics": {
+    "inline": { "enabled": true, "update_debounce_ms": 150, "padding": 4 }
+  },
+  // No hover popovers — inline diagnostics carry the signal instead.
+  "hover_popover_enabled": false,
+
+  // ──────────────────────────── Tabs & bars ───────────────────────────────────
+  "tabs": {
+    "show_close_button": "hover",
+    "close_position": "left",
+    "file_icons": false,
+    "git_status": true
+  },
+  "tab_bar": { "show_pinned_tabs_in_separate_row": true },
+  "title_bar": {
+    "show_menus": false,
+    "show_branch_status_icon": true
+  },
+  "status_bar": { "show_active_file": true },
+  // Branch + repo-relative path in the OS window title.
+  "window_title_format": "${projectName}${separator}${branch}${separator}${relativePath}",
+
+  // ─────────────────────────────── Panels ─────────────────────────────────────
+  // Files + git on the left, agent + collab on the right, terminal at the bottom.
+  "project_panel": {
+    "dock": "left",
+    "indent_size": 10.0,
+    "indent_guides": { "show": "always" },
+    "entry_spacing": "comfortable",
+    "sticky_scroll": true,
+    "git_status_indicator": true,
+    "diagnostic_badges": true,
+    "scrollbar": { "show": "never" },
+    "sort_mode": "files_first",
+    "sort_order": "lower",
+    "hide_root": true
+  },
+  "git_panel": {
+    "dock": "left",
+    "default_width": 200.0,
+    "tree_view": true,
+    "folder_indicator": "chevron",
+    "sort_by": "path",
+    "group_by": "none",
+    "show_count_badge": true,
+    "scrollbar": { "show": "never" }
+  },
+  "collaboration_panel": { "dock": "right" },
+  "agent": {
+    "dock": "right",
+    "threads_sidebar": { "position": "right" }
+  },
+  "terminal": {
+    "dock": "bottom",
+    "starts_open": true,
+    "line_height": { "custom": 1.4 }
+  }
+}
