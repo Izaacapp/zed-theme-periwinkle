@@ -5,13 +5,13 @@
 // whole thing or cherry-pick a section.
 {
   // ─────────────────────────────── Theme ──────────────────────────────────────
-  // "Periwinkle Glow" is the daily driver; plain "Periwinkle" is the punchier
+  // "Periwinkle Frost" is the daily driver; "Periwinkle Neon" is the punchier
   // magenta/cyan variant. Both use blurred, translucent panels — on macOS the
   // desktop shows through as frosted glass.
   "theme": {
     "mode": "dark",
-    "light": "Periwinkle Glow",
-    "dark": "Periwinkle Glow"
+    "light": "Periwinkle Frost",
+    "dark": "Periwinkle Frost"
   },
   // Needs the `fantasticons-icons-theme` extension (see extensions.jsonc).
   "icon_theme": {

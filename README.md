@@ -2,21 +2,26 @@
 
 A synthwave theme for [Zed](https://zed.dev). It has a deep plum base and
 frosted, translucent panels. Syntax colors are complementary pairs, so color
-carries meaning: in the Glow variant, sky-blue keywords sit against peach
-strings and orchid functions against green numbers.
+carries meaning: in Frost, sky-blue keywords sit against peach strings and
+orchid functions against green numbers.
+
+![Periwinkle Frost with the project panel, Markdown preview, terminal, and threads sidebar](assets/periwinkle-frost-threads-sidebar.png)
 
 This repo also includes the editor layout and extension kit it's used with,
 so you can clone the whole setup, not just the colors.
 
 | Variant | Accents | Feel |
 | --- | --- | --- |
-| **Periwinkle Glow** | sky `#82e2ff` · orchid `#f899ff` | softer, the daily driver |
-| **Periwinkle** | cyan `#36e0e6` · magenta `#ff3d9a` | punchier, higher contrast |
+| **Periwinkle Frost** | sky `#82e2ff` · orchid `#f899ff` | softer, the daily driver (screenshots) |
+| **Periwinkle Neon** | cyan `#36e0e6` · magenta `#ff3d9a` | punchier, higher contrast |
+
+![Periwinkle Frost with the agent panel docked right](assets/periwinkle-frost-agent-panel.png)
 
 ## What's here
 
 ```text
 extension.toml            Zed extension manifest
+assets/                   screenshots
 themes/periwinkle.json    both theme variants
 settings/periwinkle.jsonc the full look + layout (tabs, panels, bars, terminal)
 settings/extensions.jsonc the extension kit, as an auto_install_extensions block
@@ -28,7 +33,7 @@ settings/extensions.jsonc the extension kit, as an auto_install_extensions block
 
 Clone the repo, then in Zed run **`zed: install dev extension`** from the
 command palette and pick the cloned folder. Then open the theme picker with
-`cmd-k cmd-t` and choose **Periwinkle Glow**.
+`cmd-k cmd-t` and choose **Periwinkle Frost**.
 
 ### 2. The layout (optional)
 
@@ -67,7 +72,7 @@ font.
 - **Translucency:** both variants use `background.appearance: "blurred"`,
   so the desktop shows through the panels. That's most visible on macOS. If
   you'd rather have solid panels, set `"background.appearance": "opaque"` under
-  `theme_overrides` → `"Periwinkle Glow"` in your settings.
+  `theme_overrides` → `"Periwinkle Frost"` in your settings.
 - **Not included:** AI/agent configuration, MCP servers, language-server
   tuning, and keybindings. Those are tied to the original machine.
 
